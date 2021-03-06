@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Previsão do Tempo</title>
+    <meta charset="utf-8">
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <script type="text/javascript" src="script.js"></script>
+
+  </head>
+  <body>
+    	<p><form id="form" method="post">
+    		<label>Cidade:</label>
+    		<input id="cidade" type="text" name="cidade">
+    		  <button type="button" onclick="consultaTempo()">Pesquisar</button>
+    	</form></p>
+    	<script type="text/javascript" src="script.js"></script><br>
+     <div id="resultado">
+           <table border="1px">
+              <tr>
+                <th><span id="tituloTabela">Dados Meteorológicos:</span></th>
+                <th><img src="previsao.png" height="60vm" width="60vm"></th>
+              </tr>
+              <tr>
+                <td>
+                  <p>Temperatura atual:</p>      
+                </td>   
+                <td>
+                  <span id="grauAtual"></span>     
+                </td> 
+              </tr>
+              <tr>
+                <td>
+                  <p>Temperatura máxima:</p>
+                </td>    
+                <td>
+                   <span id="grauMax"></span>      
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>Temperatura mínima:</p>
+                </td>
+                <td>
+                   <span id="grauMin"></span>
+                </td>    
+              </tr>
+             <tr>
+                <td>
+                  <p>Nascer do sol:</p>
+                </td>
+                <td>
+                  <span id="nSol"></span>
+                </td>    
+              </tr>
+            <tr>
+                <td>
+                  <p>Por do sol:</p>
+                </td>
+                <td>
+                  <span id="pSol"></span>
+                </td>    
+            </tr>
+           <tr>
+                <td>
+                  <p>Latitude:</p>
+                </td>
+                <td>
+                  <span id="lat"></span>
+                </td>    
+            </tr>
+           <tr>
+                <td>
+                  <p>Longitude:</p>
+                </td>
+                <td>
+                  <span id="long"></span>
+                </td>    
+            </tr>
+            <tr>
+                <td>
+                  <p>Condição do tempo:</p>
+                </td>
+                <td>
+                   <div id="icon"><img id="cond" src="" ></div>
+                </td>    
+            </tr>
+        </table>
+        </div>
+        <h1>Localização:</h1>
+       <div id="map"></div>
+        <script async 
+              src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3HcuZNf9VXex5B5ZZgPJKnKpZ_t8MLbM&callback=initMap&libraries=&v=weekly">
+        </script>
+        <script src="jquery.js"></script>
+        
+  </body>
+</html>
